@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title th:inline="text">Test React project</title>
+
+<!-- Login page. Only thymeleaf have been used -->
+
+<link rel="stylesheet" th:href="@{/webjars/bootstrap/4.3.1/css/bootstrap.min.css}" />
+	
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />	
+</head>
+<body>
+	<div class="container">
+	<div class="row justify-content-center align-items-center">
+		<div class="col-md-6 col-md-offset-3 pt-4">
+		<form th:action="@{/login}" method="post">
+			<div class="form-group row justify-content-center align-items-center">
+				<h3>Test ReactJS application</h3>
+			</div>
+		
+			<div class="form-group row">
+				<label th:if="${loginError != null}" 
+						for="username" class="col-md-4 col-form-label"
+						style="color : red !important;"  th:inline="text">user</label>
+				<label th:if="${loginError == null}" 
+						for="username" class="col-md-4 col-form-label"	th:inline="text">user</label>
+				<div class="col-md-8">
+					<input type="text" class="form-control" id="username"
+						name="username" autofocus="autofocus" placeholder="Username" />
+				</div>
+			</div>
+			<div class="form-group row">
+				<label th:if="${loginError != null}"
+						 for="password" class="col-md-4 col-form-label" 
+						 style="color : red !important;" th:inline="text">password</label>
+				<label th:if="${loginError == null}" 
+						for="password" class="col-md-4 col-form-label" th:inline="text">password</label>
+				<div class="col-md-8">
+					<input type="password" class="form-control" id="password"
+						name="password" placeholder="Password" />
+				</div>
+			</div>
+			<div class="form-group" >
+				<div class="btn-group col-md-12"  >
+					<button type="submit" class="btn btn-md btn-primary btn-block"
+						id="submit-form" th:inline="text">Enter</button>
+				</div>
+			</div>
+		</form>
+		</div>
+	</div>
+	</div>
+</body>
+</html>

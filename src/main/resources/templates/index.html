@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      th:replace="layout/base :: base (body=~{::#content})">
+
+<!-- Main page. Here have to be inserted bundle.js of compiled React application -->
+
+<div id="content">
+
+<!-- 	<div th:replace="~{layout/header :: copy}"></div> -->
+
+	<div class="container-fluid">
+
+		<div class="container col-12">
+			<div id="react"></div>
+		</div>	
+
+    	<script src="built/bundle.js"></script>
+    
+    
+    	<footer class="text-right">
+    		&copy; 2019
+    		<button class="btn btn-secondary" id="send_to_react_button">Send command to React</button>
+    	</footer>
+    </div>
+
+    <script type="text/javascript" th:inline="text">
+    	
+    	$(document).ready(function() {
+	    	$('#send_to_react_button').click(function(e){
+	    		 const element = document.querySelector('#data_react_interact')
+	    		 const event = new Event('input', { bubbles: true })
+	    		 const previousValue = element.value
+
+	    		 element.value = 'change'
+	    		 element._valueTracker.setValue(previousValue)
+	    		 element.dispatchEvent(event)
+        	});
+    	})
+    
+    </script>
+
+	
+</div>
+</html>
