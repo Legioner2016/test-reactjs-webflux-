@@ -33840,7 +33840,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_UserList__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/UserList */ "./src/main/js/components/UserList.js");
 /* harmony import */ var _components_NewUser__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/NewUser */ "./src/main/js/components/NewUser.js");
 /* harmony import */ var _components_LongRequest__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/LongRequest */ "./src/main/js/components/LongRequest.js");
-/* harmony import */ var _components_LongRequest__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_components_LongRequest__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var react_intl__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-intl */ "./node_modules/react-intl/lib/index.es.js");
 /* harmony import */ var react_intl_locale_data_en__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-intl/locale-data/en */ "./node_modules/react-intl/locale-data/en.js");
 /* harmony import */ var react_intl_locale_data_en__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_intl_locale_data_en__WEBPACK_IMPORTED_MODULE_5__);
@@ -33874,10 +33873,6 @@ function _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.
 
 function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }
 
-{
-  /* Входной файл приложения  */
-}
-
 var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 
 var ReactDOM = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
@@ -33890,6 +33885,8 @@ var ReactDOM = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/in
 
 
 
+
+/* Main React application file  */
 
 Object(react_intl__WEBPACK_IMPORTED_MODULE_4__["addLocaleData"])([].concat(_toConsumableArray(react_intl_locale_data_en__WEBPACK_IMPORTED_MODULE_5___default.a), _toConsumableArray(react_intl_locale_data_ru__WEBPACK_IMPORTED_MODULE_6___default.a)));
 window.current_language = navigator.language.split(/[-_]/)[0];
@@ -34030,10 +34027,114 @@ ReactDOM.render(React.createElement(App, null), document.getElementById('react')
 /*!***********************************************!*\
   !*** ./src/main/js/components/LongRequest.js ***!
   \***********************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+/*! exports provided: LongRequest */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: /home/legioner/workspace_new/TestReactProject/src/main/js/components/LongRequest.js: Unexpected token (15:3)\n\n  13 | \t  }\n  14 | \n> 15 | \t  {/* Обработчик нажатия на кнопку. Подписка на событие проверки состояния task-а */}\n     | \t  ^\n  16 | \t  testRequest(event) {\n  17 | \t\t  \tconst comp = this; \n  18 | \t\t    event.preventDefault();\n    at Object.raise (/home/legioner/workspace_new/TestReactProject/node_modules/@babel/parser/lib/index.js:6344:17)\n    at Object.unexpected (/home/legioner/workspace_new/TestReactProject/node_modules/@babel/parser/lib/index.js:7659:16)\n    at Object.parseIdentifierName (/home/legioner/workspace_new/TestReactProject/node_modules/@babel/parser/lib/index.js:9505:18)\n    at Object.parseIdentifier (/home/legioner/workspace_new/TestReactProject/node_modules/@babel/parser/lib/index.js:9483:23)\n    at Object.parseMaybePrivateName (/home/legioner/workspace_new/TestReactProject/node_modules/@babel/parser/lib/index.js:8850:19)\n    at Object.parsePropertyName (/home/legioner/workspace_new/TestReactProject/node_modules/@babel/parser/lib/index.js:9303:98)\n    at Object.parseClassPropertyName (/home/legioner/workspace_new/TestReactProject/node_modules/@babel/parser/lib/index.js:10740:22)\n    at Object.parseClassMemberWithIsStatic (/home/legioner/workspace_new/TestReactProject/node_modules/@babel/parser/lib/index.js:10661:22)\n    at Object.parseClassMember (/home/legioner/workspace_new/TestReactProject/node_modules/@babel/parser/lib/index.js:10631:10)\n    at withTopicForbiddingContext (/home/legioner/workspace_new/TestReactProject/node_modules/@babel/parser/lib/index.js:10586:14)\n    at Object.withTopicForbiddingContext (/home/legioner/workspace_new/TestReactProject/node_modules/@babel/parser/lib/index.js:9683:14)\n    at Object.parseClassBody (/home/legioner/workspace_new/TestReactProject/node_modules/@babel/parser/lib/index.js:10563:10)\n    at Object.parseClass (/home/legioner/workspace_new/TestReactProject/node_modules/@babel/parser/lib/index.js:10537:22)\n    at Object.parseStatementContent (/home/legioner/workspace_new/TestReactProject/node_modules/@babel/parser/lib/index.js:9830:21)\n    at Object.parseStatement (/home/legioner/workspace_new/TestReactProject/node_modules/@babel/parser/lib/index.js:9788:17)\n    at Object.parseExportDeclaration (/home/legioner/workspace_new/TestReactProject/node_modules/@babel/parser/lib/index.js:10980:17)\n    at Object.maybeParseExportDeclaration (/home/legioner/workspace_new/TestReactProject/node_modules/@babel/parser/lib/index.js:10930:31)\n    at Object.parseExport (/home/legioner/workspace_new/TestReactProject/node_modules/@babel/parser/lib/index.js:10859:29)\n    at Object.parseStatementContent (/home/legioner/workspace_new/TestReactProject/node_modules/@babel/parser/lib/index.js:9892:27)\n    at Object.parseStatement (/home/legioner/workspace_new/TestReactProject/node_modules/@babel/parser/lib/index.js:9788:17)\n    at Object.parseBlockOrModuleBlockBody (/home/legioner/workspace_new/TestReactProject/node_modules/@babel/parser/lib/index.js:10364:25)\n    at Object.parseBlockBody (/home/legioner/workspace_new/TestReactProject/node_modules/@babel/parser/lib/index.js:10351:10)\n    at Object.parseTopLevel (/home/legioner/workspace_new/TestReactProject/node_modules/@babel/parser/lib/index.js:9717:10)\n    at Object.parse (/home/legioner/workspace_new/TestReactProject/node_modules/@babel/parser/lib/index.js:11233:17)\n    at parse (/home/legioner/workspace_new/TestReactProject/node_modules/@babel/parser/lib/index.js:11269:38)\n    at parser (/home/legioner/workspace_new/TestReactProject/node_modules/@babel/core/lib/transformation/normalize-file.js:170:34)\n    at normalizeFile (/home/legioner/workspace_new/TestReactProject/node_modules/@babel/core/lib/transformation/normalize-file.js:138:11)\n    at runSync (/home/legioner/workspace_new/TestReactProject/node_modules/@babel/core/lib/transformation/index.js:44:43)\n    at runAsync (/home/legioner/workspace_new/TestReactProject/node_modules/@babel/core/lib/transformation/index.js:35:14)\n    at process.nextTick (/home/legioner/workspace_new/TestReactProject/node_modules/@babel/core/lib/transform.js:34:34)");
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LongRequest", function() { return LongRequest; });
+/* harmony import */ var _translation_messages__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../translation/messages */ "./src/main/js/translation/messages.js");
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+
+/* Component for long request testing. Main idea: start long task and get it progress in one request */
+
+var LongRequest =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(LongRequest, _React$Component);
+
+  function LongRequest() {
+    var _this;
+
+    _classCallCheck(this, LongRequest);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(LongRequest).call(this));
+    _this.state = {
+      started: false,
+      percentage: null
+    };
+    _this.testRequest = _this.testRequest.bind(_assertThisInitialized(_this));
+    return _this;
+  }
+  /* Обработчик нажатия на кнопку. Подписка на событие проверки состояния task-а */
+
+
+  _createClass(LongRequest, [{
+    key: "testRequest",
+    value: function testRequest(event) {
+      var comp = this;
+      event.preventDefault();
+      var evtSource = new EventSource("/longRequest");
+
+      evtSource.onmessage = function (event) {
+        var data = JSON.parse(event.data);
+
+        if (data.done) {
+          evtSource.close();
+          comp.setState({
+            started: false,
+            percentage: null
+          });
+        } else {
+          if (data.percentage != comp.state.percentage) {
+            comp.setState({
+              started: true,
+              percentage: data.percentage
+            });
+          }
+        }
+      };
+
+      comp.setState({
+        started: true,
+        percentage: 0
+      });
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _this$state = this.state,
+          started = _this$state.started,
+          percentage = _this$state.percentage;
+      return React.createElement("div", {
+        className: "container"
+      }, React.createElement("div", {
+        className: "col-12"
+      }, React.createElement("div", {
+        className: "row text-center"
+      }, started ? React.createElement("input", {
+        type: "text",
+        className: "form-control",
+        value: percentage + " %"
+      }) : null), React.createElement("div", {
+        className: "row text-center"
+      }, started ? null : React.createElement("button", {
+        onClick: this.testRequest
+      }, "Test long request"))));
+    }
+  }]);
+
+  return LongRequest;
+}(React.Component);
 
 /***/ }),
 
@@ -34073,9 +34174,8 @@ var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 
 
 
-{
-  /* СТраница добавления нового пользователя */
-}
+/* New user form component */
+
 var NewUser =
 /*#__PURE__*/
 function (_React$Component) {
@@ -34233,9 +34333,8 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 
 
-{
-  /* Компонент - пользователь (элемент списка) */
-}
+/* User component (list element) */
+
 var User =
 /*#__PURE__*/
 function (_React$Component) {
@@ -34352,9 +34451,8 @@ var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 
 
 
-{
-  /* Компонент - список пользователей */
-}
+/* Users list */
+
 var UserList =
 /*#__PURE__*/
 function (_React$Component) {
@@ -34482,10 +34580,9 @@ function (_React$Component) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* My experiments with i18n came to saving messages this way  */
 
-{
-  /* Мои эксперименрты по интернализации пока привели к такому хранению  */
-}
+
 var messages = {
   'ru': {
     "menu.userlist": "Список пользователей",

@@ -4,7 +4,7 @@ import {User} from './User';
 import {IntlProvider, FormattedMessage } from "react-intl";
 import messages from '../translation/messages';
 
-{/* Компонент - список пользователей */}
+/* Users list */
 export class UserList  extends React.Component{
 	
 	constructor(props) {

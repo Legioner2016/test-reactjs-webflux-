@@ -6,6 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 /**
  * Тестовое приложение SpringBoot + ReactJs
  * TODO:  - валидация (руками выполняется, автоматическая - проблема)
+ * 		- @Transactional не работает (нужно какое-то решение в обход)
  * 
  * @author a.palkin
  *

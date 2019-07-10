@@ -1,7 +1,7 @@
 const React = require('react');
 import { Redirect } from 'react-router';
 
-{/* Компонент - пользователь (элемент списка) */}
+/* User component (list element) */
 export class User extends React.Component{
 
 	constructor(props) {

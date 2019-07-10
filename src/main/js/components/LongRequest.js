@@ -1,7 +1,7 @@
 const React = require('react');
 import messages from '../translation/messages';
 
-{/* Компонент теста длительного запроса. Идея такая: запустить длительный task и в один запрос отслеживать его выполнение до завершения  */}
+/* Component for long request testing. Main idea: start long task and get it progress in one request */
 export class LongRequest extends React.Component{
 	  constructor() {
 		    super();
@@ -12,7 +12,7 @@ export class LongRequest extends React.Component{
 		    this.testRequest = this.testRequest.bind(this);
 	  }
 
-	  {/* Обработчик нажатия на кнопку. Подписка на событие проверки состояния task-а */}
+	  /* Обработчик нажатия на кнопку. Подписка на событие проверки состояния task-а */
 	  testRequest(event) {
 		  	const comp = this; 
 		    event.preventDefault();

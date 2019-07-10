@@ -1,6 +1,6 @@
 const React = require('react');
 
-{/* Мои эксперименрты по интернализации пока привели к такому хранению  */}
+/* My experiments with i18n came to saving messages this way  */
 const  messages = {
 	    'ru': {
 	        "menu.userlist": "Список пользователей",

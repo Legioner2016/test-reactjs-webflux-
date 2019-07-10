@@ -3,7 +3,7 @@ import { Redirect } from 'react-router';
 import {IntlProvider, FormattedMessage } from "react-intl";
 import messages from '../translation/messages';
 
-{/* СТраница добавления нового пользователя */}
+/* New user form component */
 export class NewUser extends React.Component{
 	  constructor() {
 		    super();

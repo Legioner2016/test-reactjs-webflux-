@@ -1,4 +1,3 @@
-{/* Входной файл приложения  */}
 const React = require('react');
 const ReactDOM = require('react-dom');
 import { Route, NavLink, HashRouter} from "react-router-dom";
@@ -10,6 +9,8 @@ import locale_en from 'react-intl/locale-data/en';
 import locale_ru from 'react-intl/locale-data/ru';
 import messages from './translation/messages';
 import { Redirect } from 'react-router';
+
+/* Main React application file  */
 
 addLocaleData([...locale_en, ...locale_ru]);
 
