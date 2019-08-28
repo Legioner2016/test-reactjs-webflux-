@@ -33839,14 +33839,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/es/index.js");
 /* harmony import */ var _components_UserList__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/UserList */ "./src/main/js/components/UserList.js");
 /* harmony import */ var _components_NewUser__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/NewUser */ "./src/main/js/components/NewUser.js");
-/* harmony import */ var _components_LongRequest__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/LongRequest */ "./src/main/js/components/LongRequest.js");
-/* harmony import */ var react_intl__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-intl */ "./node_modules/react-intl/lib/index.es.js");
-/* harmony import */ var react_intl_locale_data_en__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-intl/locale-data/en */ "./node_modules/react-intl/locale-data/en.js");
-/* harmony import */ var react_intl_locale_data_en__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_intl_locale_data_en__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var react_intl_locale_data_ru__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-intl/locale-data/ru */ "./node_modules/react-intl/locale-data/ru.js");
-/* harmony import */ var react_intl_locale_data_ru__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react_intl_locale_data_ru__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _translation_messages__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./translation/messages */ "./src/main/js/translation/messages.js");
-/* harmony import */ var react_router__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-router */ "./node_modules/react-router/es/index.js");
+/* harmony import */ var _components_NavigationMenuItem__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/NavigationMenuItem */ "./src/main/js/components/NavigationMenuItem.js");
+/* harmony import */ var _components_LongRequest__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/LongRequest */ "./src/main/js/components/LongRequest.js");
+/* harmony import */ var react_intl__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-intl */ "./node_modules/react-intl/lib/index.es.js");
+/* harmony import */ var react_intl_locale_data_en__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-intl/locale-data/en */ "./node_modules/react-intl/locale-data/en.js");
+/* harmony import */ var react_intl_locale_data_en__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react_intl_locale_data_en__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var react_intl_locale_data_ru__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-intl/locale-data/ru */ "./node_modules/react-intl/locale-data/ru.js");
+/* harmony import */ var react_intl_locale_data_ru__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react_intl_locale_data_ru__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _translation_messages__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./translation/messages */ "./src/main/js/translation/messages.js");
+/* harmony import */ var react_router__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react-router */ "./node_modules/react-router/es/index.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -33886,9 +33887,10 @@ var ReactDOM = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/in
 
 
 
+
 /* Main React application file  */
 
-Object(react_intl__WEBPACK_IMPORTED_MODULE_4__["addLocaleData"])([].concat(_toConsumableArray(react_intl_locale_data_en__WEBPACK_IMPORTED_MODULE_5___default.a), _toConsumableArray(react_intl_locale_data_ru__WEBPACK_IMPORTED_MODULE_6___default.a)));
+Object(react_intl__WEBPACK_IMPORTED_MODULE_5__["addLocaleData"])([].concat(_toConsumableArray(react_intl_locale_data_en__WEBPACK_IMPORTED_MODULE_6___default.a), _toConsumableArray(react_intl_locale_data_ru__WEBPACK_IMPORTED_MODULE_7___default.a)));
 window.current_language = navigator.language.split(/[-_]/)[0];
 
 var App =
@@ -33931,9 +33933,9 @@ function (_React$Component) {
     value: function render() {
       var _this2 = this;
 
-      return React.createElement(react_intl__WEBPACK_IMPORTED_MODULE_4__["IntlProvider"], {
+      return React.createElement(react_intl__WEBPACK_IMPORTED_MODULE_5__["IntlProvider"], {
         locale: this.state.language,
-        messages: _translation_messages__WEBPACK_IMPORTED_MODULE_7__["default"][this.state.language]
+        messages: _translation_messages__WEBPACK_IMPORTED_MODULE_8__["default"][this.state.language]
       }, React.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_0__["HashRouter"], null, React.createElement("div", {
         className: "col-12"
       }, React.createElement("nav", {
@@ -33954,26 +33956,23 @@ function (_React$Component) {
         className: "navbar-nav"
       }, "\xA0\xA0\xA0\xA0\xA0\xA0\xA0\xA0", React.createElement("li", {
         className: "nav-item"
-      }, React.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_0__["NavLink"], {
-        to: "/userlist"
-      }, React.createElement(react_intl__WEBPACK_IMPORTED_MODULE_4__["FormattedMessage"], {
-        id: "menu.userlist",
+      }, React.createElement(_components_NavigationMenuItem__WEBPACK_IMPORTED_MODULE_3__["NavigationMenuItem"], {
+        link: "/userlist",
+        messageId: "menu.userlist",
         defaultMessage: "Users list"
-      }))), "\xA0\xA0\xA0\xA0", React.createElement("li", {
+      })), "\xA0\xA0\xA0\xA0", React.createElement("li", {
         className: "nav-item"
-      }, React.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_0__["NavLink"], {
-        to: "/newuser"
-      }, React.createElement(react_intl__WEBPACK_IMPORTED_MODULE_4__["FormattedMessage"], {
-        id: "menu.adduser",
+      }, React.createElement(_components_NavigationMenuItem__WEBPACK_IMPORTED_MODULE_3__["NavigationMenuItem"], {
+        link: "/newuser",
+        messageId: "menu.adduser",
         defaultMessage: "Add user"
-      }))), "\xA0\xA0\xA0\xA0", React.createElement("li", {
+      })), "\xA0\xA0\xA0\xA0", React.createElement("li", {
         className: "nav-item"
-      }, React.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_0__["NavLink"], {
-        to: "/longrequest"
-      }, React.createElement(react_intl__WEBPACK_IMPORTED_MODULE_4__["FormattedMessage"], {
-        id: "menu.longrequest",
+      }, React.createElement(_components_NavigationMenuItem__WEBPACK_IMPORTED_MODULE_3__["NavigationMenuItem"], {
+        link: "/longrequest",
+        messageId: "menu.longrequest",
         defaultMessage: "Long request test"
-      })))), React.createElement("ul", {
+      }))), React.createElement("ul", {
         className: "navbar-nav ml-auto"
       }, React.createElement("li", {
         className: "nav-item mr-sm-2"
@@ -34009,8 +34008,8 @@ function (_React$Component) {
         component: _components_NewUser__WEBPACK_IMPORTED_MODULE_2__["NewUser"]
       }), React.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_0__["Route"], {
         path: "/longrequest",
-        component: _components_LongRequest__WEBPACK_IMPORTED_MODULE_3__["LongRequest"]
-      }), this.state.toList ? React.createElement(react_router__WEBPACK_IMPORTED_MODULE_8__["Redirect"], {
+        component: _components_LongRequest__WEBPACK_IMPORTED_MODULE_4__["LongRequest"]
+      }), this.state.toList ? React.createElement(react_router__WEBPACK_IMPORTED_MODULE_9__["Redirect"], {
         to: "/userlist"
       }) : null))));
     }
@@ -34020,6 +34019,69 @@ function (_React$Component) {
 }(React.Component);
 
 ReactDOM.render(React.createElement(App, null), document.getElementById('react'));
+
+/***/ }),
+
+/***/ "./src/main/js/components/Label.js":
+/*!*****************************************!*\
+  !*** ./src/main/js/components/Label.js ***!
+  \*****************************************/
+/*! exports provided: Label */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Label", function() { return Label; });
+/* harmony import */ var react_intl__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-intl */ "./node_modules/react-intl/lib/index.es.js");
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+
+/* Label component (internatialization) */
+
+var Label =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(Label, _React$Component);
+
+  function Label(props) {
+    _classCallCheck(this, Label);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(Label).call(this, props));
+  }
+
+  _createClass(Label, [{
+    key: "render",
+    value: function render() {
+      return React.createElement("label", {
+        className: this.props.className,
+        htmlFor: this.props.htmlFor
+      }, React.createElement(react_intl__WEBPACK_IMPORTED_MODULE_0__["FormattedMessage"], {
+        id: this.props.messageId,
+        defaultMessage: this.props.defaultMessage
+      }));
+    }
+  }]);
+
+  return Label;
+}(React.Component);
 
 /***/ }),
 
@@ -34138,6 +34200,70 @@ function (_React$Component) {
 
 /***/ }),
 
+/***/ "./src/main/js/components/NavigationMenuItem.js":
+/*!******************************************************!*\
+  !*** ./src/main/js/components/NavigationMenuItem.js ***!
+  \******************************************************/
+/*! exports provided: NavigationMenuItem */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NavigationMenuItem", function() { return NavigationMenuItem; });
+/* harmony import */ var react_intl__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-intl */ "./node_modules/react-intl/lib/index.es.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/es/index.js");
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+
+
+/* Menu item */
+
+var NavigationMenuItem =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(NavigationMenuItem, _React$Component);
+
+  function NavigationMenuItem(props) {
+    _classCallCheck(this, NavigationMenuItem);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(NavigationMenuItem).call(this, props));
+  }
+
+  _createClass(NavigationMenuItem, [{
+    key: "render",
+    value: function render() {
+      return React.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["NavLink"], {
+        to: this.props.link
+      }, React.createElement(react_intl__WEBPACK_IMPORTED_MODULE_0__["FormattedMessage"], {
+        id: this.props.messageId,
+        defaultMessage: this.props.defaultMessage
+      }));
+    }
+  }]);
+
+  return NavigationMenuItem;
+}(React.Component);
+
+/***/ }),
+
 /***/ "./src/main/js/components/NewUser.js":
 /*!*******************************************!*\
   !*** ./src/main/js/components/NewUser.js ***!
@@ -34151,6 +34277,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_router__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-router */ "./node_modules/react-router/es/index.js");
 /* harmony import */ var react_intl__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-intl */ "./node_modules/react-intl/lib/index.es.js");
 /* harmony import */ var _translation_messages__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../translation/messages */ "./src/main/js/translation/messages.js");
+/* harmony import */ var _Label__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Label */ "./src/main/js/components/Label.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -34170,6 +34297,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
 var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
 
 
 
@@ -34252,39 +34380,36 @@ function (_React$Component) {
         }
       }, this.state.error) : null), React.createElement("div", {
         className: "form-group row"
-      }, React.createElement("label", {
+      }, React.createElement(_Label__WEBPACK_IMPORTED_MODULE_3__["Label"], {
         className: "form-label col-3",
-        htmlFor: "login"
-      }, React.createElement(react_intl__WEBPACK_IMPORTED_MODULE_1__["FormattedMessage"], {
-        id: "newuser.login",
+        htmlFor: "login",
+        messageId: "newuser.login",
         defaultMessage: "Enter user login"
-      })), React.createElement("input", {
+      }), React.createElement("input", {
         id: "login",
         name: "login",
         type: "text",
         className: "form-control col-8"
       })), React.createElement("div", {
         className: "form-group row"
-      }, React.createElement("label", {
+      }, React.createElement(_Label__WEBPACK_IMPORTED_MODULE_3__["Label"], {
         className: "form-label col-3",
-        htmlFor: "name"
-      }, React.createElement(react_intl__WEBPACK_IMPORTED_MODULE_1__["FormattedMessage"], {
-        id: "newuser.name",
+        htmlFor: "name",
+        messageId: "newuser.name",
         defaultMessage: "Enter user name"
-      })), React.createElement("input", {
+      }), React.createElement("input", {
         id: "name",
         name: "name",
         type: "text",
         className: "form-control col-8"
       })), React.createElement("div", {
         className: "form-group row"
-      }, React.createElement("label", {
+      }, React.createElement(_Label__WEBPACK_IMPORTED_MODULE_3__["Label"], {
         className: "form-label col-3",
-        htmlFor: "surname"
-      }, React.createElement(react_intl__WEBPACK_IMPORTED_MODULE_1__["FormattedMessage"], {
-        id: "newuser.surname",
+        htmlFor: "surname",
+        messageId: "newuser.surname",
         defaultMessage: "Enter user surname"
-      })), React.createElement("input", {
+      }), React.createElement("input", {
         id: "surname",
         name: "surname",
         type: "text",
@@ -34297,6 +34422,74 @@ function (_React$Component) {
   }]);
 
   return NewUser;
+}(React.Component);
+
+/***/ }),
+
+/***/ "./src/main/js/components/TableHeader.js":
+/*!***********************************************!*\
+  !*** ./src/main/js/components/TableHeader.js ***!
+  \***********************************************/
+/*! exports provided: TableHeader */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TableHeader", function() { return TableHeader; });
+/* harmony import */ var react_intl__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-intl */ "./node_modules/react-intl/lib/index.es.js");
+function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+
+/* Label analog for table header row */
+
+var TableHeader =
+/*#__PURE__*/
+function (_React$Component) {
+  _inherits(TableHeader, _React$Component);
+
+  function TableHeader(props) {
+    _classCallCheck(this, TableHeader);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(TableHeader).call(this, props));
+  }
+
+  _createClass(TableHeader, [{
+    key: "render",
+    value: function render() {
+      if (this.props.messageId == null) {
+        return React.createElement("th", {
+          className: this.props.className
+        }, this.props.text);
+      }
+
+      return React.createElement("th", {
+        className: this.props.className
+      }, React.createElement(react_intl__WEBPACK_IMPORTED_MODULE_0__["FormattedMessage"], {
+        id: this.props.messageId,
+        defaultMessage: this.props.defaultMessage
+      }));
+    }
+  }]);
+
+  return TableHeader;
 }(React.Component);
 
 /***/ }),
@@ -34428,6 +34621,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _User__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./User */ "./src/main/js/components/User.js");
 /* harmony import */ var react_intl__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-intl */ "./node_modules/react-intl/lib/index.es.js");
 /* harmony import */ var _translation_messages__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../translation/messages */ "./src/main/js/translation/messages.js");
+/* harmony import */ var _TableHeader__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./TableHeader */ "./src/main/js/components/TableHeader.js");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -34447,6 +34641,7 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
 var React = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
 
 
 
@@ -34538,29 +34733,26 @@ function (_React$Component) {
           messages: _translation_messages__WEBPACK_IMPORTED_MODULE_2__["default"][window.current_language]
         }, React.createElement("table", {
           className: "table table-striped table-bordered"
-        }, React.createElement("thead", null, React.createElement("tr", null, React.createElement("th", {
-          className: "text-center no-sort"
-        }, "Id"), React.createElement("th", {
-          className: "text-center no-sort"
-        }, React.createElement(react_intl__WEBPACK_IMPORTED_MODULE_1__["FormattedMessage"], {
-          id: "userlist.table.login",
+        }, React.createElement("thead", null, React.createElement("tr", null, React.createElement(_TableHeader__WEBPACK_IMPORTED_MODULE_3__["TableHeader"], {
+          className: "text-center no-sort",
+          text: "Id"
+        }), React.createElement(_TableHeader__WEBPACK_IMPORTED_MODULE_3__["TableHeader"], {
+          className: "text-center no-sort",
+          messageId: "userlist.table.login",
           defaultMessage: "Login"
-        })), React.createElement("th", {
-          className: "text-center no-sort"
-        }, React.createElement(react_intl__WEBPACK_IMPORTED_MODULE_1__["FormattedMessage"], {
-          id: "userlist.table.name",
+        }), React.createElement(_TableHeader__WEBPACK_IMPORTED_MODULE_3__["TableHeader"], {
+          className: "text-center no-sort",
+          messageId: "userlist.table.name",
           defaultMessage: "User name"
-        })), React.createElement("th", {
-          className: "text-center no-sort"
-        }, React.createElement(react_intl__WEBPACK_IMPORTED_MODULE_1__["FormattedMessage"], {
-          id: "userlist.table.role",
+        }), React.createElement(_TableHeader__WEBPACK_IMPORTED_MODULE_3__["TableHeader"], {
+          className: "text-center no-sort",
+          messageId: "userlist.table.role",
           defaultMessage: "User role"
-        })), React.createElement("th", {
-          className: "text-center no-sort"
-        }, React.createElement(react_intl__WEBPACK_IMPORTED_MODULE_1__["FormattedMessage"], {
-          id: "userlist.table.actions",
+        }), React.createElement(_TableHeader__WEBPACK_IMPORTED_MODULE_3__["TableHeader"], {
+          className: "text-center no-sort",
+          messageId: "userlist.table.actions",
           defaultMessage: "Actions"
-        })))), React.createElement("tbody", null, users_)));
+        }))), React.createElement("tbody", null, users_)));
       }
     }
   }]);

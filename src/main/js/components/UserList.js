@@ -3,6 +3,7 @@ const React = require('react');
 import {User} from './User';
 import {IntlProvider, FormattedMessage } from "react-intl";
 import messages from '../translation/messages';
+import {TableHeader} from './TableHeader';
 
 /* Users list */
 export class UserList  extends React.Component{
@@ -71,19 +72,15 @@ export class UserList  extends React.Component{
 						<table className="table table-striped table-bordered">
 							<thead>
 								<tr>
-						    		<th className="text-center no-sort">Id</th>
-						    		<th className="text-center no-sort">
-						    			<FormattedMessage id="userlist.table.login" defaultMessage="Login" />
-						    		</th>
-						    		<th className="text-center no-sort">
-						    			<FormattedMessage id="userlist.table.name" defaultMessage="User name" />
-						    		</th>
-						    		<th className="text-center no-sort">
-						    			<FormattedMessage id="userlist.table.role" defaultMessage="User role" />
-						    		</th>
-						    		<th className="text-center no-sort">
-						    			<FormattedMessage id="userlist.table.actions" defaultMessage="Actions" />
-						    		</th>
+									<TableHeader className="text-center no-sort" text="Id" />
+									<TableHeader className="text-center no-sort" 
+											messageId="userlist.table.login" defaultMessage="Login"  />
+									<TableHeader className="text-center no-sort" 
+												messageId="userlist.table.name" defaultMessage="User name"  />
+									<TableHeader className="text-center no-sort" 
+													messageId="userlist.table.role" defaultMessage="User role"  />
+									<TableHeader className="text-center no-sort" 
+														messageId="userlist.table.actions" defaultMessage="Actions"  />
 						    	</tr>
 						    </thead>
 							<tbody>

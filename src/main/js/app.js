@@ -3,6 +3,7 @@ const ReactDOM = require('react-dom');
 import { Route, NavLink, HashRouter} from "react-router-dom";
 import {UserList} from './components/UserList';
 import {NewUser} from './components/NewUser';
+import {NavigationMenuItem} from './components/NavigationMenuItem';
 import {LongRequest} from './components/LongRequest';
 import {IntlProvider, addLocaleData, FormattedMessage } from "react-intl";
 import locale_en from 'react-intl/locale-data/en';
@@ -58,19 +59,13 @@ class App extends React.Component {
         
 							<ul className="navbar-nav">
 							        <li className="nav-item">
-										<NavLink to="/userlist">
-											<FormattedMessage id="menu.userlist" defaultMessage="Users list" />
-										</NavLink>
+										<NavigationMenuItem link="/userlist" messageId="menu.userlist" defaultMessage="Users list" />
 									</li>
 								    <li className="nav-item">
-										<NavLink to="/newuser">
-											<FormattedMessage id="menu.adduser" defaultMessage="Add user"/>
-										</NavLink>
+										<NavigationMenuItem link="/newuser" messageId="menu.adduser" defaultMessage="Add user" />
 									</li>
 								    <li className="nav-item">
-										<NavLink to="/longrequest">
-											<FormattedMessage id="menu.longrequest" defaultMessage="Long request test"/>
-										</NavLink>
+										<NavigationMenuItem link="/longrequest" messageId="menu.longrequest" defaultMessage="Long request test" />
 									</li>
 							</ul>
 
