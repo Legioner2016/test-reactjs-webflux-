@@ -5,6 +5,7 @@ import static org.springframework.web.reactive.function.server.RequestPredicates
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.core.io.ClassPathResource;
 import org.springframework.web.reactive.function.server.RouterFunction;
 import org.springframework.web.reactive.function.server.RouterFunctions;
 import org.springframework.web.reactive.function.server.ServerResponse;
@@ -23,7 +24,14 @@ public class WebFluxRoutes {
 	
 	@Bean
 	public RouterFunction<ServerResponse> routes(){
-		return RouterFunctions.route(GET("/login"), handlerFunctions::login)
+		return RouterFunctions
+				.resources("/**", new ClassPathResource("static/"))
+				.and(
+						RouterFunctions.resources("/webjars/**", new ClassPathResource("webjars/"))
+				)
+				.and(
+						RouterFunctions.route(GET("/login"), handlerFunctions::login)
+				)
 				.and(
 						RouterFunctions.route(GET("/"), handlerFunctions::mainPage)
 				)
@@ -38,7 +46,8 @@ public class WebFluxRoutes {
 				)
 				.and(
 						RouterFunctions.route(GET("/longRequest"), handlerFunctions::longRequest)
-				);
+				)
+				;
 
 	}
 	

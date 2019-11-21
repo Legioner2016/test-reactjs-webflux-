@@ -19,7 +19,7 @@ import com.intech.test.react.models.UserRole;
 
 /**
  * Security конфигурация. 
- * TODO: сделать logout
+ * logout - через post запрос (чуть гемморойнее обернуть в форме, но суть та же)
  * 
  * @author a.palkin
  *
@@ -35,9 +35,9 @@ public class SecurityConfig {
         		.loginPage("/login")
         		.authenticationSuccessHandler(new RedirectServerAuthenticationSuccessHandler("/"))
         	.and()
-        	.logout()
-        		.logoutUrl("/logout")
-        		.logoutSuccessHandler(logoutSuccessHandler("/login"))
+        		.logout()
+//        		.logoutUrl("/logout")        		
+//        		.logoutSuccessHandler(logoutSuccessHandler("/login"))
         	.and()
         	.authorizeExchange()
 			.pathMatchers("/login",
@@ -62,11 +62,11 @@ public class SecurityConfig {
 	    return new MapReactiveUserDetailsService(user);
 	}
 	
-    public ServerLogoutSuccessHandler logoutSuccessHandler(String uri) {
-        RedirectServerLogoutSuccessHandler successHandler = new RedirectServerLogoutSuccessHandler();
-        successHandler.setLogoutSuccessUrl(URI.create(uri));
-        return successHandler;
-    }
+//    public ServerLogoutSuccessHandler logoutSuccessHandler(String uri) {
+//        RedirectServerLogoutSuccessHandler successHandler = new RedirectServerLogoutSuccessHandler();
+//        successHandler.setLogoutSuccessUrl(URI.create(uri));
+//        return successHandler;
+//    }
 	
 	
 }

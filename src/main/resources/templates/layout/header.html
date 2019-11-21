@@ -22,7 +22,8 @@
                   		</li>	
                   		<li class="nav-item">
                   			<a th:href="@{/applicationManagement}" class="nav-link" role="button" >New user</a>
-                  		</li>	
+                  		</li>
+               			<li class="nav-item"><a th:href="@{/logout}" class="nav-link">Logout</a></li>
                     </ul>
 
                     <ul class="navbar-nav ml-auto">
@@ -34,7 +35,6 @@
                         <li class="nav-item" th:if="${#locale.language == 'en'}"><span class="navbar-text">en</span></li>
                         <li class="nav-item" th:if="${#locale.language == 'ru'}"><a th:href="@{''(lang='en')}" class="nav-link">en</a></li>
                         
-                        <li class="nav-item"><a th:href="@{/logout}" class="nav-link">Logout</a></li>
                     </ul>
                 
                 </div>

@@ -20,6 +20,9 @@
     	<footer class="text-right">
     		&copy; 2019
     		<button class="btn btn-secondary" id="send_to_react_button">Send command to React</button>
+    		<form method="post" th:action="@{/logout}" >
+    			<a href="#" onclick="$(this).closest('form').submit()">Logout</a>
+    		</form>
     	</footer>
     </div>
 
